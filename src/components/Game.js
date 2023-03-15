@@ -1,6 +1,7 @@
 import React from "react";
 import API from "../utils/Api-omdb";
 import movieData from "../data/movieData.json";
+import Soundtrack from "./Soundtrack";
 
 const Game = () => {
   // function to rundomize our array of movies
@@ -28,14 +29,18 @@ const Game = () => {
        .catch((err) => console.log(err));
   };
   searchMovie(query);
+
   return (
     <div data-test="component-game">
+
       {/* add posters */}
       <img src={imgURL} alt="name" />
       <img src={imgURL} alt="name" />
+      <Soundtrack />
       <button>I am tired</button>
     </div>
   );
 };
 
 export default Game;
+
