@@ -3,7 +3,7 @@ import API from "../utils/Api-omdb";
 import movieData from "../data/movieData.json";
 
 const Game = () => {
-  
+  // function to rundomize our array of movies
   function shuffle(array) {
     const copy = Array.from(array);
     for (let i = copy.length - 1; i > 0; i--) {
@@ -13,19 +13,27 @@ const Game = () => {
     return copy;
   }
   
-  const choose5pairs = shuffle(movieData).slice(0, 10);
-  console.log(choose5pairs);
+  // choose all the movies we are giong to use in the game 
+  const choosePairs = shuffle(movieData).slice(0, 10);
+  console.log(choosePairs);
+
+  // Just an example of movie to search on OMDB
   const query = "tt0451279";
 
+  // function to get data from OMDB
+  let imgURL = "";
   function searchMovie (param) {
      API.search(param)
-       .then((res) => console.log(res))
+       .then((res) => { imgURL = res.data.Poster; console.log(imgURL); })
        .catch((err) => console.log(err));
   };
   searchMovie(query);
   return (
     <div data-test="component-game">
-      
+      {/* add posters */}
+      <img src={imgURL} alt="name" />
+      <img src={imgURL} alt="name" />
+      <button>I am tired</button>
     </div>
   );
 };
