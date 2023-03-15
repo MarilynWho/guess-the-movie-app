@@ -1,6 +1,7 @@
 import React from "react";
 import API from "../utils/Api-omdb";
 import movieData from "../data/movieData.json";
+import Soundtrack from "./Soundtrack";
 
 const Game = () => {
   
@@ -23,9 +24,10 @@ const Game = () => {
        .catch((err) => console.log(err));
   };
   searchMovie(query);
+
   return (
     <div data-test="component-game">
-      
+      <Soundtrack />
     </div>
   );
 };

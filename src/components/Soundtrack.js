@@ -12,7 +12,7 @@ const Soundtrack = () => {
     
     return (
         <div className="container">
-          <h1>Hello, audio player!</h1>
+          <h1>MP3 player here below</h1>
           <AudioPlayer
             src= {searchSong("trolls")}
             volume={0.5}
