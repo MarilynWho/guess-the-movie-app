@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const APIKEY = "http://www.omdbapi.com/?apikey=trilogy&i=";
+const APIKEY = "http://www.omdbapi.com/?apikey=trilogy&t=";
 
 // Export an object with a "search" method that searches the Giphy API for the passed query
 export default {
