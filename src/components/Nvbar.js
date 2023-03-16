@@ -40,27 +40,6 @@ const Navbar = () => {
         </ul>
       </div>
     </nav>
-    //   <div data-test="component-navbar">
-    //     <nav className="navbar sticky-top">
-    //       <ul className="nav-link ">
-    //         <li>
-    //           <Link className="nav " to="/">
-    //             Home
-    //           </Link>
-    //         </li>
-    //         <li>
-    //           <Link className="nav " to="/scores">
-    //             Scores
-    //           </Link>
-    //         </li>
-    //         <li>
-    //           <Link className="nav " to="/info">
-    //             Info
-    //           </Link>
-    //         </li>
-    //       </ul>
-    //     </nav>
-    //   </div>
   );
 };
 
