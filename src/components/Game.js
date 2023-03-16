@@ -29,12 +29,6 @@ const Game = () => {
         imgURL = res.data.Poster;
         console.log(imgURL);
       })
-      // .catch((err) => console.log(err))
-
-      // .then((res) => {
-      //   imgURL = res.data.Poster;
-      //   console.log(imgURL);
-      // })
       .catch((err) => console.log(err));
   }
 
