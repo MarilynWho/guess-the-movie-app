@@ -42,7 +42,7 @@ const Game = () => {
         <img src={data} alt="name" className="img-game" />
         <img src={data} alt="name" className="img-game-two" />
       </div>
-      7
+
       <Soundtrack song={query} />
       <div className="game-btn">
         <button className="game">I am tired</button>
