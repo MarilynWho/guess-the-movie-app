@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import API from "../utils/Api-omdb";
 import movieData from "../data/movieData.json";
 import Soundtrack from "./Soundtrack";
 
 const Game = () => {
+  const [data, setData] = useState(null);
+  console.log("hello");
   // function to rundomize our array of movies
   function shuffle(array) {
     const copy = Array.from(array);
@@ -15,36 +17,28 @@ const Game = () => {
   }
 
   const choosePairs = shuffle(movieData).slice(0, 10);
-  console.log(choosePairs);
+  // console.log(choosePairs);
 
   // Just an example of movie to search on OMDB
-  const query = "tt0451279";
+  const query = "Thor: Love and Thunder";
 
   // function to get data from OMDB
-  let imgURL = "";
-  function searchMovie(param) {
-    API.search(param)
 
+  useEffect(() => {
+    API.search(query)
       .then((res) => {
-        imgURL = res.data.Poster;
-        console.log(imgURL);
+        setData(res.data.Poster);
       })
-      .catch((err) => console.log(err))
-
-      .then((res) => {
-        imgURL = res.data.Poster;
-        console.log(imgURL);
-      })
-      .catch((err) => console.log(err));
-  }
-
-  searchMovie(query);
-
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+  console.log(data);
   return (
     <div data-test="component-game">
       {/* add posters */}
-      <img src={imgURL} alt="name" />
-      <img src={imgURL} alt="name" />
+      <img src={data} alt="name" />
+      <img src={data} alt="name" />
       <Soundtrack />
       <div className="game-btn">
         <button className="game">I am tired</button>
