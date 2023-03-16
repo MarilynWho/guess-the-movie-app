@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
+
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg ">
@@ -39,27 +40,6 @@ const Navbar = () => {
         </ul>
       </div>
     </nav>
-    //   <div data-test="component-navbar">
-    //     <nav className="navbar sticky-top">
-    //       <ul className="nav-link ">
-    //         <li>
-    //           <Link className="nav " to="/">
-    //             Home
-    //           </Link>
-    //         </li>
-    //         <li>
-    //           <Link className="nav " to="/scores">
-    //             Scores
-    //           </Link>
-    //         </li>
-    //         <li>
-    //           <Link className="nav " to="/info">
-    //             Info
-    //           </Link>
-    //         </li>
-    //       </ul>
-    //     </nav>
-    //   </div>
   );
 };
 
