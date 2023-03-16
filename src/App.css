@@ -52,12 +52,12 @@
 }
 
 .hand {
-  height: 325px;
+  height: 250px;
 }
 
 .hand-img {
-  padding-bottom: 140px;
-  padding-right: 125px;
+  padding-bottom: 155px;
+  padding-right: 175px;
 }
 
 /* .homePage {
@@ -176,6 +176,15 @@
   margin-top: 20px;
 }
 
+/*Info*/
+
+.info-title {
+  color: #f1ae2c;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
 /*Footer*/
 
 footer {
@@ -216,15 +225,19 @@ footer {
   .title {
     font-size: 40px;
   }
+  .home {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 
   /*make hand image smaller in small screens*/
   .hand {
-    height: 200px;
+    height: 125px;
   }
 
   .hand-img {
-    padding-bottom: 250px;
-    padding-left: 20;
+    padding-bottom: 300px;
   }
 
   /*make buttons smaller in a small screens*/
