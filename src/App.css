@@ -56,7 +56,7 @@
 }
 
 .hand-img {
-  padding-bottom: 155px;
+  padding-bottom: 160px;
   padding-right: 175px;
 }
 
@@ -192,7 +192,7 @@
   padding-top: 30px;
   display: flex;
   justify-content: center;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
 }
 
 .game-btn {
