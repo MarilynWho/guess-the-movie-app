@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default {
+const DeezerAPI = {
     search: function (query) {
         return axios.request({
             method: 'GET',
@@ -13,3 +13,5 @@ export default {
         });
     }
 };
+
+export default DeezerAPI;
