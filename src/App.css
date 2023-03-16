@@ -178,6 +178,23 @@
 
 /*Game*/
 
+.img-game {
+  max-width: 225px;
+  padding-right: 10px;
+}
+
+.img-game-two {
+  max-width: 225px;
+  padding-left: 10px;
+}
+
+.poster {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
 .game-btn {
   padding-top: 40px;
   display: flex;

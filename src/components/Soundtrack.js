@@ -20,8 +20,7 @@ const Soundtrack = (props) => {
   searchSong(query);
 
   return (
-    <div className="container">
-      <p>MP3 player below</p>
+    <div className="container audio-player" style={{ width: "475px" }}>
       <AudioPlayer
         autoPlay
         src={songUrl}
