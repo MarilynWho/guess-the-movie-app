@@ -59,6 +59,7 @@ const Game = () => {
         }}
         src={questionData.poster1}
         alt={questionData.name1}
+        className="img-game"
       />
       <img
         onClick={() => {
@@ -66,8 +67,10 @@ const Game = () => {
         }}
         src={questionData.poster2}
         alt={questionData.name2}
+        className="img-game-two"
       />
       <Soundtrack soundtrack={ questionData.soundtrack} />
+
       <div className="game-btn">
         <button className="game">I am tired</button>
       </div>

@@ -7,7 +7,7 @@ const Soundtrack = (props) => {
   const { soundtrack } = props;
 
   return (
-    <div className="container">
+    <div className="container audio-player" style={{ width: "475px" }}>
       <AudioPlayer
         autoPlay
         src={soundtrack}
