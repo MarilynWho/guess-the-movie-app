@@ -46,7 +46,9 @@ const Game = () => {
       <img src={imgURL} alt="name" />
       <img src={imgURL} alt="name" />
       <Soundtrack />
-      <button className="game">I am tired</button>
+      <div className="game-btn">
+        <button className="game">I am tired</button>
+      </div>
     </div>
   );
 };
