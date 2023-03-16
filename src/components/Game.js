@@ -38,11 +38,12 @@ const Game = () => {
   return (
     <div data-test="component-game">
       {/* add posters */}
-      <img src={data} alt="name" />
-      <img src={data} alt="name" />
-      <Soundtrack
-        song={query}
-      />
+      <div className="poster">
+        <img src={data} alt="name" className="img-game" />
+        <img src={data} alt="name" className="img-game-two" />
+      </div>
+      7
+      <Soundtrack song={query} />
       <div className="game-btn">
         <button className="game">I am tired</button>
       </div>
