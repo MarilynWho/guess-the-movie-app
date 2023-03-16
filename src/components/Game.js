@@ -14,7 +14,6 @@ const Game = () => {
     return copy;
   }
 
-
   const choosePairs = shuffle(movieData).slice(0, 10);
   console.log(choosePairs);
 
@@ -30,12 +29,14 @@ const Game = () => {
         imgURL = res.data.Poster;
         console.log(imgURL);
       })
+      .catch((err) => console.log(err))
+
+      .then((res) => {
+        imgURL = res.data.Poster;
+        console.log(imgURL);
+      })
       .catch((err) => console.log(err));
   }
-
-      .then((res) => { imgURL = res.data.Poster; console.log(imgURL); })
-      .catch((err) => console.log(err));
-  };
 
   searchMovie(query);
 
