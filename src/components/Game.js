@@ -18,18 +18,12 @@ const Game = () => {
   console.log(choosePairs);
 
   // Just an example of movie to search on OMDB
-  const query = "tt0451279";
+  const query = "trolls";
 
   // function to get data from OMDB
   let imgURL = "";
   function searchMovie(param) {
     API.search(param)
-
-      .then((res) => {
-        imgURL = res.data.Poster;
-        console.log(imgURL);
-      })
-      .catch((err) => console.log(err))
 
       .then((res) => {
         imgURL = res.data.Poster;
