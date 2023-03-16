@@ -9,6 +9,7 @@ import Navbar from "./components/Nvbar";
 import Home from "./components/Home";
 import Footer from "./components/footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import WellDone from "./components/WellDone";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path="/try-again" element={<TryAgain />} />
               <Route path="/scores" element={<Scores />} />
               <Route path="/info" element={<Info />} />
+              <Route path="/well-done" element={<WellDone />} />
             </Routes>
           </div>
           <Footer />

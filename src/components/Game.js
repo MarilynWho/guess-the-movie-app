@@ -1,47 +1,73 @@
 import React, { useState, useEffect } from "react";
-import API from "../utils/Api-omdb";
-import movieData from "../data/movieData.json";
 import Soundtrack from "./Soundtrack";
+import { getQuestions, getQuestionData } from "../utils/lib";
+import { useNavigate } from "react-router-dom";
 
 const Game = () => {
-  const [data, setData] = useState(null);
-  console.log("hello");
-  // function to rundomize our array of movies
-  function shuffle(array) {
-    const copy = Array.from(array);
-    for (let i = copy.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      [copy[i], copy[j]] = [copy[j], copy[i]];
-    }
-    return copy;
-  }
-
-  const choosePairs = shuffle(movieData).slice(0, 10);
-  // console.log(choosePairs);
-
-  // Just an example of movie to search on OMDB
-  const query = "Thor: Love and Thunder";
-
+  const navigate = useNavigate();
+  const [questions, setQuestions] = useState(null);
+  const [questionData, setQuestionData] = useState(null);
+  const [questionIndex, setQuestionIndex] = useState(0);
 
   // function to get data from OMDB
 
   useEffect(() => {
-    API.search(query)
-      .then((res) => {
-        setData(res.data.Poster);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    getQuestions().then((questions) => {
+      setQuestions(questions);
+    });
   }, []);
-  console.log(data);
-  
+
+  useEffect(() => {
+    if (!questions) {
+      return;
+    }
+    getQuestionData(questions[questionIndex]).then((questionData) => {
+      setQuestionData(questionData);
+    });
+  }, [questions, questionIndex]);
+
+  if (!questionData) {
+    return "loading...";
+  }
+
+  function checkAnswer(index) {
+    let answerMovieName;
+    console.log(questionIndex, questions.length);
+    if (index === 0) {
+      answerMovieName = questionData.name1;
+    } else {
+      answerMovieName = questionData.name2;
+    }
+    if (answerMovieName === questionData.correctAns) {
+      if (questionIndex === questions.length - 1) {
+        navigate("/well-done");
+      } else {
+        setQuestionIndex(questionIndex + 1);
+        setQuestionData(null);
+      }
+    } else { 
+      navigate("/try-again");
+    }
+  }
+
   return (
     <div data-test="component-game">
       {/* add posters */}
-      <img src={data} alt="name" />
-      <img src={data} alt="name" />
-      <Soundtrack />
+      <img
+        onClick={() => {
+          checkAnswer(0);
+        }}
+        src={questionData.poster1}
+        alt={questionData.name1}
+      />
+      <img
+        onClick={() => {
+          checkAnswer(1);
+        }}
+        src={questionData.poster2}
+        alt={questionData.name2}
+      />
+      <Soundtrack soundtrack={ questionData.soundtrack} />
       <div className="game-btn">
         <button className="game">I am tired</button>
       </div>
