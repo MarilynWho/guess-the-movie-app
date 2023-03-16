@@ -14,7 +14,7 @@ const Game = () => {
     return copy;
   }
 
-  // choose all the movies we are giong to use in the game
+
   const choosePairs = shuffle(movieData).slice(0, 10);
   console.log(choosePairs);
 
@@ -25,12 +25,18 @@ const Game = () => {
   let imgURL = "";
   function searchMovie(param) {
     API.search(param)
+
       .then((res) => {
         imgURL = res.data.Poster;
         console.log(imgURL);
       })
       .catch((err) => console.log(err));
   }
+
+      .then((res) => { imgURL = res.data.Poster; console.log(imgURL); })
+      .catch((err) => console.log(err));
+  };
+
   searchMovie(query);
 
   return (
