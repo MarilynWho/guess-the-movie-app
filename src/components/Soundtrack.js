@@ -3,10 +3,10 @@ import DeezerAPI from "../utils/DeezerAPI";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 
-const Soundtrack = () => {
-  //sample query for a song
-  const query = "Shrek";
-  
+const Soundtrack = (props) => {
+  //gets poster soundtrack
+  const query = props.song;
+
   const [songUrl, setUrl] = useState("");
   const searchSong = (query) => {
     DeezerAPI.search(query)
@@ -25,7 +25,7 @@ const Soundtrack = () => {
       <AudioPlayer
         autoPlay
         src={songUrl}
-        volume={0.5}
+        volume={1.0}
         // Try other props!
       />
     </div>

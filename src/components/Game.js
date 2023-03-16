@@ -34,14 +34,16 @@ const Game = () => {
         console.log(err);
       });
   }, []);
-  console.log(data);
-  
+  // console.log(data);
+
   return (
     <div data-test="component-game">
       {/* add posters */}
       <img src={data} alt="name" />
       <img src={data} alt="name" />
-      <Soundtrack />
+      <Soundtrack
+        song={query}
+      />
       <div className="game-btn">
         <button className="game">I am tired</button>
       </div>
