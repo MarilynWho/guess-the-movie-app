@@ -22,7 +22,6 @@ const Game = () => {
   // Just an example of movie to search on OMDB
   const query = "Thor: Love and Thunder";
 
-
   // function to get data from OMDB
 
   useEffect(() => {
@@ -35,12 +34,14 @@ const Game = () => {
       });
   }, []);
   console.log(data);
-  
+
   return (
     <div data-test="component-game">
       {/* add posters */}
-      <img src={data} alt="name" />
-      <img src={data} alt="name" />
+      <div className="poster">
+        <img src={data} alt="name" className="img-game " />
+        <img src={data} alt="name" className="img-game-two" />
+      </div>
       <Soundtrack />
       <div className="game-btn">
         <button className="game">I am tired</button>

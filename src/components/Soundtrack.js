@@ -6,7 +6,7 @@ import "react-h5-audio-player/lib/styles.css";
 const Soundtrack = () => {
   //sample query for a song
   const query = "Shrek";
-  
+
   const [songUrl, setUrl] = useState("");
   const searchSong = (query) => {
     DeezerAPI.search(query)
@@ -20,8 +20,7 @@ const Soundtrack = () => {
   searchSong(query);
 
   return (
-    <div className="container">
-      <p>MP3 player below</p>
+    <div className="container audio-player" style={{ width: "430px" }}>
       <AudioPlayer
         autoPlay
         src={songUrl}
