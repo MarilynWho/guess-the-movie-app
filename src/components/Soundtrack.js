@@ -7,15 +7,16 @@ const Soundtrack = () => {
   //sample query for a song
   const query = "Shrek"
 
-  let songUrl = "";
   const searchSong = query => {
     DeezerAPI.search(query)
-      .then(res => { songUrl = res.data.data[0].preview; console.log(songUrl) })
+      .then(res => {
+        songUrl = res.data.data[0].preview;
+        console.log(songUrl)
+      })
       .catch(err => console.log(err));
   };
 
   searchSong(query);
-
 
   return (
     <div className="container">

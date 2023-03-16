@@ -18,7 +18,7 @@ const Game = () => {
   console.log(choosePairs);
 
   // Just an example of movie to search on OMDB
-  const query = "tt0451279";
+  const query = "trolls";
 
   // function to get data from OMDB
   let imgURL = "";
@@ -29,12 +29,12 @@ const Game = () => {
         imgURL = res.data.Poster;
         console.log(imgURL);
       })
-      .catch((err) => console.log(err))
+      // .catch((err) => console.log(err))
 
-      .then((res) => {
-        imgURL = res.data.Poster;
-        console.log(imgURL);
-      })
+      // .then((res) => {
+      //   imgURL = res.data.Poster;
+      //   console.log(imgURL);
+      // })
       .catch((err) => console.log(err));
   }
 
@@ -45,7 +45,7 @@ const Game = () => {
       {/* add posters */}
       <img src={imgURL} alt="name" />
       <img src={imgURL} alt="name" />
-      <Soundtrack />
+      <Soundtrack/>
       <div className="game-btn">
         <button className="game">I am tired</button>
       </div>
