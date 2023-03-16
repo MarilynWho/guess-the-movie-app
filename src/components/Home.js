@@ -11,12 +11,16 @@ const Home = () => {
       </div>
       <div className="container home">
         <div className="btn-one">
-          <button onClick={() => navigate("/game")}>Start</button>
+          <button className="button" onClick={() => navigate("/game")}>
+            START
+          </button>
           <div className="btn-two">
-            <button className="info">info</button>
+            <button className="info">INFO</button>
           </div>
         </div>
-        <img src={hand} alt="Hand" className="hand"></img>
+        <div className="hand-img">
+          <img src={hand} alt="Hand" className="hand"></img>
+        </div>
       </div>
     </div>
   );

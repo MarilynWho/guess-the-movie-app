@@ -1,3 +1,12 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set the minimum height to 100% of the viewport height */
+}
+
+.container {
+  flex-grow: 1; /* Take up all available space */
+}
 /*navbar*/
 
 .logo {
@@ -25,7 +34,7 @@
 }
 
 .nav:hover {
-  color: #f1618c;
+  color: #f1ae2c;
 }
 
 .nav-item {
@@ -36,18 +45,25 @@
 
 .title {
   text-align: center;
-  color: white;
+  color: #61a3f1;
+  font-size: 50px;
   padding-top: 40px;
+  padding-bottom: 50px;
 }
 
 .hand {
-  height: 500px;
+  height: 325px;
 }
 
-.homePage {
+.hand-img {
+  padding-bottom: 140px;
+  padding-right: 125px;
+}
+
+/* .homePage {
   background-color: rgb(78, 136, 205);
   height: 650px;
-}
+} */
 
 .home {
   display: flex;
@@ -58,43 +74,166 @@
 .btn-one {
   padding-bottom: 20px;
 }
-
-.button {
-  width: 250px;
-  height: 50px;
-  left: 300px;
-  top: 300px;
-  color: white;
-  font-size: 25px;
-  background: #f1618c;
-  border: 2px solid #df93aa;
-  border-radius: 15px;
+.btn-two {
+  padding-bottom: 250px;
 }
 
-.button:hover {
-  background-color: #df93aa;
-  border: 2px solid #f1618c;
-  color: white;
+.button {
+  background-color: rgb(233, 236, 10);
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 200px;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.button:hover:after {
+  bottom: 2px;
+  left: 2px;
 }
 
 .info {
-  width: 250px;
-  height: 50px;
-  left: 300px;
-  top: 300px;
-  color: white;
-  font-size: 25px;
-  background: #f1618c;
-  border: 2px solid #df93aa;
-  border-radius: 15px;
+  background-color: #f1ae2c;
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 200px;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.info:hover {
-  background-color: #df93aa;
-  border: 2px solid #f1618c;
-  color: white;
+.info:focus {
+  outline: 0;
+}
+
+.info:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.info:hover:after {
+  bottom: 2px;
+  left: 2px;
 }
 
 .btn-two {
   margin-top: 20px;
+}
+
+/*Footer*/
+
+footer {
+  margin-top: auto; /* Push the footer to the bottom */
+  height: 75px;
+  width: 100%;
+}
+
+.footer {
+  background-color: #61a3f1;
+}
+
+.rights {
+  text-align: center;
+}
+
+/*media query*/
+
+@media (min-width: 768px) {
+  .button {
+    padding: 0.75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /*media query navbar, height a bit smaller*/
+  .navbar {
+    height: 75px;
+  }
+
+  /*media query logo*/
+  .logo {
+    width: 150px;
+  }
+
+  /*Title smaller*/
+  .title {
+    font-size: 40px;
+  }
+
+  /*make hand image smaller in small screens*/
+  .hand {
+    height: 200px;
+  }
+
+  .hand-img {
+    padding-bottom: 250px;
+    padding-left: 20;
+  }
+
+  /*make buttons smaller in a small screens*/
+  .button {
+    padding: 10px 10px;
+    width: 100px;
+  }
+  .info {
+    padding: 10px 10px;
+    width: 100px;
+  }
 }
