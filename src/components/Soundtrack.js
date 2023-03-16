@@ -4,22 +4,30 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
 const Soundtrack = () => {
-    const searchSong = query => {
-        DeezerAPI.search(query)
-          .then(res => console.log( res.data.data[0].preview))
-          .catch(err => console.log(err));
-      };
-    
-    return (
-        <div className="container">
-          <h1>MP3 player here below</h1>
-          <AudioPlayer
-            src= {searchSong("trolls")}
-            volume={0.5}
-            // Try other props!
-          />
-        </div>
-      );
+  //sample query for a song
+  const query = "Shrek"
+
+  let songUrl = "";
+  const searchSong = query => {
+    DeezerAPI.search(query)
+      .then(res => { songUrl = res.data.data[0].preview; console.log(songUrl) })
+      .catch(err => console.log(err));
+  };
+
+  searchSong(query);
+
+
+  return (
+    <div className="container">
+      <p>MP3 player below</p>
+      <AudioPlayer
+        autoPlay
+        src={songUrl}
+        volume={0.5}
+      // Try other props!
+      />
+    </div>
+  );
 };
 
 export default Soundtrack;
