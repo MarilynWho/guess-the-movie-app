@@ -179,17 +179,17 @@
 /*Game*/
 
 .img-game {
-  max-width: 200px;
+  max-width: 225px;
   padding-right: 10px;
 }
 
 .img-game-two {
-  max-width: 200px;
+  max-width: 225px;
   padding-left: 10px;
 }
 
 .poster {
-  padding-top: 20px;
+  padding-top: 30px;
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
