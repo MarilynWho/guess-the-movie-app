@@ -251,7 +251,7 @@
 /*Info*/
 
 .info-title {
-  color: #f1ae2c;
+  color: white;
   text-align: center;
   padding-top: 40px;
   padding-bottom: 30px;
@@ -259,7 +259,7 @@
 
 /*Scoore file*/
 .score-title {
-  color: #61a3f1;
+  color: white;
   padding-top: 30px;
   text-align: center;
 }
@@ -314,7 +314,7 @@
 /*Well done*/
 .well-donetitle {
   text-align: center;
-  color: #61a3f1;
+  color: white;
   padding-top: 20px;
   font-size: 50px;
 }
@@ -323,7 +323,7 @@
 
 .titleagain {
   text-align: center;
-  color: #61a3f1;
+  color: white;
   padding-top: 30px;
 }
 
