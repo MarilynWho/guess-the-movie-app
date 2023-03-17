@@ -189,10 +189,10 @@
 }
 
 .poster {
-  padding-top: 30px;
   display: flex;
   justify-content: center;
-  padding-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .game-btn {
@@ -309,6 +309,14 @@
 .score-btn:hover:after {
   bottom: 2px;
   left: 2px;
+}
+
+/*Well done*/
+.well-donetitle {
+  text-align: center;
+  color: #61a3f1;
+  padding-top: 20px;
+  font-size: 50px;
 }
 
 /*Footer*/

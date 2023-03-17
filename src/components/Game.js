@@ -45,7 +45,7 @@ const Game = () => {
         setQuestionIndex(questionIndex + 1);
         setQuestionData(null);
       }
-    } else { 
+    } else {
       navigate("/try-again");
     }
   }
@@ -53,23 +53,25 @@ const Game = () => {
   return (
     <div data-test="component-game">
       {/* add posters */}
-      <img
-        onClick={() => {
-          checkAnswer(0);
-        }}
-        src={questionData.poster1}
-        alt={questionData.name1}
-        className="img-game"
-      />
-      <img
-        onClick={() => {
-          checkAnswer(1);
-        }}
-        src={questionData.poster2}
-        alt={questionData.name2}
-        className="img-game-two"
-      />
-      <Soundtrack soundtrack={ questionData.soundtrack} />
+      <div className="poster">
+        <img
+          onClick={() => {
+            checkAnswer(0);
+          }}
+          src={questionData.poster1}
+          alt={questionData.name1}
+          className="img-game"
+        />
+        <img
+          onClick={() => {
+            checkAnswer(1);
+          }}
+          src={questionData.poster2}
+          alt={questionData.name2}
+          className="img-game-two"
+        />
+      </div>
+      <Soundtrack soundtrack={questionData.soundtrack} />
 
       <div className="game-btn">
         <button className="game">I am tired</button>
