@@ -8,9 +8,9 @@ const Game = () => {
   const [questions, setQuestions] = useState(null);
   const [questionData, setQuestionData] = useState(null);
   const [questionIndex, setQuestionIndex] = useState(0);
+  const [score, setScore] = useState(0);
 
   // function to get data from OMDB
-
   useEffect(() => {
     getQuestions().then((questions) => {
       setQuestions(questions);
@@ -32,6 +32,8 @@ const Game = () => {
 
   function checkAnswer(index) {
     let answerMovieName;
+    const newScore = score + 1;
+
     console.log(questionIndex, questions.length);
     if (index === 0) {
       answerMovieName = questionData.name1;
@@ -39,6 +41,7 @@ const Game = () => {
       answerMovieName = questionData.name2;
     }
     if (answerMovieName === questionData.correctAns) {
+      setScore(newScore);
       if (questionIndex === questions.length - 1) {
         navigate("/well-done");
       } else {
@@ -47,11 +50,13 @@ const Game = () => {
       }
     } else {
       navigate("/try-again");
+      setScore(0);
     }
   }
 
   return (
     <div data-test="component-game">
+      <h2>Score: {score}</h2>
       {/* add posters */}
       <div className="poster">
         <img

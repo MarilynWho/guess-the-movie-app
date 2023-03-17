@@ -4,6 +4,8 @@ import handthree from "../images/Purple-in-Jumper2.png";
 
 const WellDone = (props) => {
   const navigate = useNavigate();
+
+
   return (
     <div data-test="component-well-done">
       <h2 className="well-donetitle"> Well Done!!!</h2>

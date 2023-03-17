@@ -1,6 +1,6 @@
 import API from "./Api-omdb";
 import DeezerAPI from "./DeezerAPI";
-// function to rundomize our array of movies
+// function to randomize our array of movies
 export function shuffle(array) {
   const copy = Array.from(array);
   for (let i = copy.length - 1; i > 0; i--) {
