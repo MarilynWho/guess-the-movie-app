@@ -13,6 +13,7 @@ const Info = (props) => {
       </p>
       <h5>How to play:</h5>
       <p>- The player must answer 5 questions</p>
+      <p>- A title is bestowed upon you depending on your score</p>
       <p>- You will receive one point for each correct answer.</p>
 
       <h6>This game is for family and friends</h6>
