@@ -10,12 +10,14 @@ import Home from "./components/Home";
 import Footer from "./components/footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import WellDone from "./components/WellDone";
+import ParticlesBg from "particles-bg";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <div className="wrapper">
+          <ParticlesBg type="circle" bg={true} />
           <Navbar />
           <div className="container">
             <Routes>
