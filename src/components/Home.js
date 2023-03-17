@@ -15,7 +15,7 @@ const Home = () => {
             START
           </button>
           <div className="btn-two">
-            <button className="info">INFO</button>
+            <button className="info" onClick={() => navigate("/info")}>INFO</button>
           </div>
         </div>
         <div className="hand-img">

@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Info = (props) => {
+  const navigate = useNavigate();
   return (
     <div data-test="component-info">
       <h2 className="info-title">Info</h2>
@@ -15,6 +17,10 @@ const Info = (props) => {
 
       <h6>This game is for family and friends</h6>
       <h6>Guess the movie App is made for movie-lovers</h6>
+      <h6>You ready?</h6>
+      <button className="button" onClick={() => navigate("/game")}>
+            START
+          </button>
     </div>
   );
 };
