@@ -325,6 +325,11 @@
   font-size: 50px;
 }
 
+.welldone-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /*Try again*/
 
 .titleagain {
