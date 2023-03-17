@@ -178,6 +178,12 @@
 
 /*Game*/
 
+.bestScore {
+  color: #e5e7eb;
+  font-size: 20px;
+  text-align: right;
+}
+
 .img-game {
   max-width: 225px;
   padding-right: 10px;
@@ -191,7 +197,7 @@
 .poster {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+
   padding-bottom: 20px;
 }
 

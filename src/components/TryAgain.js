@@ -7,11 +7,10 @@ const TryAgain = (props) => {
   return (
     <div data-test="component-try-again">
       <h1 className="titleagain">Try Again</h1>
-      <div className="try-btn">
-        <button className="button-Again" onClick={() => navigate("/game")}>
-          Play Again
-        </button>
-      </div>
+      <div class="try"></div>
+      <button className="button-Again" onClick={() => navigate("/game")}>
+        Play Again
+      </button>
       <div className="handTwo">
         <img src={handtwo} alt="hand" className="hand-two"></img>
       </div>

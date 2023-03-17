@@ -9,15 +9,15 @@ const Game = () => {
   const [questionData, setQuestionData] = useState(null);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [bestScore, setBestScore] =useState(0);
+  const [bestScore, setBestScore] = useState(0);
 
   //function to get bestScore from localStorage
-useEffect(() => {
-  const bestScore = localStorage.getItem("newBestScore");
-  if (bestScore) {
-    setBestScore(bestScore);
-  }
-},[]);
+  useEffect(() => {
+    const bestScore = localStorage.getItem("newBestScore");
+    if (bestScore) {
+      setBestScore(bestScore);
+    }
+  }, []);
 
   // function to get data from OMDB
   useEffect(() => {
@@ -53,8 +53,8 @@ useEffect(() => {
     if (answerMovieName === questionData.correctAns) {
       setScore(newScore);
       if (questionIndex === questions.length - 1) {
-        setBestScore(newBestScore)
-        localStorage.setItem("newBestScore",newBestScore)
+        setBestScore(newBestScore);
+        localStorage.setItem("newBestScore", newBestScore);
         navigate("/well-done");
       } else {
         setQuestionIndex(questionIndex + 1);
@@ -63,15 +63,17 @@ useEffect(() => {
     } else {
       navigate("/try-again");
       setScore(0);
-      setBestScore(newBestScore)
-      localStorage.setItem("newBestScore",newBestScore)
+      setBestScore(newBestScore);
+      localStorage.setItem("newBestScore", newBestScore);
     }
   }
 
   return (
     <div data-test="component-game">
-      <p> score={score} </p>
-      <p> bestScore={bestScore}</p>
+      <div className="bestScore">
+        <p> score={score} </p>
+        <p> bestScore={bestScore}</p>
+      </div>
       {/* add posters */}
       <div className="poster">
         <img
@@ -94,7 +96,9 @@ useEffect(() => {
       <Soundtrack soundtrack={questionData.soundtrack} />
 
       <div className="game-btn">
-        <button className="game" onClick={() => navigate("/")}>I am tired</button>
+        <button className="game" onClick={() => navigate("/")}>
+          I am tired
+        </button>
       </div>
     </div>
   );
