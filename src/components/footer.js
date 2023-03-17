@@ -5,7 +5,7 @@ const footer = () => {
     <div data-test="component-footer">
       <footer className="footer">
         <p className="rights">
-          © 2023 Daryl Cataluna, Victoria Chechelnytsk & Tatiana Leitao. All
+          © 2023 Daryl Cataluna, Victoria Chechelnytska & Tatiana Leitao. All
           Rights Reserved.
         </p>
       </footer>
