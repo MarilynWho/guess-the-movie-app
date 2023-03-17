@@ -9,6 +9,15 @@ const Game = () => {
   const [questionData, setQuestionData] = useState(null);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const [bestScore, setBestScore] =useState(0);
+
+  //function to get bestScore from localStorage
+useEffect(() => {
+  const bestScore = localStorage.getItem("newBestScore");
+  if (bestScore) {
+    setBestScore(bestScore);
+  }
+},[]);
 
   // function to get data from OMDB
   useEffect(() => {
@@ -33,6 +42,7 @@ const Game = () => {
   function checkAnswer(index) {
     let answerMovieName;
     const newScore = score + 1;
+    const newBestScore = Math.max(newScore, bestScore);
 
     console.log(questionIndex, questions.length);
     if (index === 0) {
@@ -43,6 +53,8 @@ const Game = () => {
     if (answerMovieName === questionData.correctAns) {
       setScore(newScore);
       if (questionIndex === questions.length - 1) {
+        setBestScore(newBestScore)
+        localStorage.setItem("newBestScore",newBestScore)
         navigate("/well-done");
       } else {
         setQuestionIndex(questionIndex + 1);
@@ -51,12 +63,15 @@ const Game = () => {
     } else {
       navigate("/try-again");
       setScore(0);
+      setBestScore(newBestScore)
+      localStorage.setItem("newBestScore",newBestScore)
     }
   }
 
   return (
     <div data-test="component-game">
-      <h2>Score: {score}</h2>
+      <p> score={score} </p>
+      <p> bestScore={bestScore}</p>
       {/* add posters */}
       <div className="poster">
         <img
@@ -79,7 +94,7 @@ const Game = () => {
       <Soundtrack soundtrack={questionData.soundtrack} />
 
       <div className="game-btn">
-        <button className="game">I am tired</button>
+        <button className="game" onClick={() => navigate("/")}>I am tired</button>
       </div>
     </div>
   );
