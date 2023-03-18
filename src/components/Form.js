@@ -9,10 +9,7 @@ const Form = (props) => {
     function handleSubmit(event) {
         event.preventDefault();
         localStorage.setItem(userInput, userScore);
-        savedData = window.localStorage.key(2)
-        console.log(savedData);
     }
-
 
     return (
         <div>

@@ -5,19 +5,33 @@ const Scores = (props) => {
   const navigate = useNavigate();
   const bestScore = localStorage.getItem("newBestScore")
 
-  function allStorage() {
-    var archive = [],
-      keys = Object.keys(localStorage),
-      i = 2, key;
+  //sample scores to dipay in Scores.js
+  const scoreData = [
+    {
+      name: "Nana",
+      score: bestScore,
+      title: whatTitle()
+    },
+    {
+      name: "Jack",
+      score: bestScore,
+      title: whatTitle()
+    },
+  ]
 
-    for (; key = keys[i]; i++) {
-      archive.push(key);
-    }
+  // function allStorage() {
+  //   var archive = [],
+  //     keys = Object.keys(localStorage),
+  //     i = 2, key;
 
-    return archive;
-  }
-  const name = allStorage();
-  console.log(name);
+  //   for (; key = keys[i]; i++) {
+  //     archive.push(key);
+  //   }
+
+  //   return archive;
+  // }
+  // const name = allStorage();
+  // console.log(name);
 
   function whatTitle() {
     let title;
@@ -45,12 +59,16 @@ const Scores = (props) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row"></th>
-            <td>{name[3]}</td>
-            <td>{whatTitle()}</td>
-            <td>{bestScore}</td>
-          </tr>
+          {scoreData.map((val, key) => {
+            return (
+              <tr key={key}>
+                <th scope="row"></th>
+                <td>{val.name}</td>
+                <td>{val.title}</td>
+                <td>{val.score}</td>
+              </tr>
+            )
+          })}
         </tbody>
       </table>
       <button className="button" onClick={() => navigate("/")}>Back Home</button>
