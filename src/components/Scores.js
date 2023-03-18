@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Scores = () => {
+  const navigate = useNavigate();
   const bestScore = localStorage.getItem("newBestScore");
 
   function whatTitle() {
@@ -33,7 +35,7 @@ const Scores = () => {
           </tr>
         </tbody>
       </table>
-      <button className="button">Back Home</button>
+      <button className="button" onClick={() => navigate("/")}>Back Home</button>
     </div>
   );
 };

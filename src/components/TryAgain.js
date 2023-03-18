@@ -12,6 +12,7 @@ const TryAgain = (props) => {
           Play Again
         </button>
       </div>
+      <h2>submit form here</h2>
       <div className="handTwo">
         <img src={handtwo} alt="hand" className="hand-two"></img>
       </div>

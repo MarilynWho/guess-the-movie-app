@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Soundtrack from "./Soundtrack";
 import { getQuestions, getQuestionData } from "../utils/lib";
 import { useNavigate } from "react-router-dom";
+import Form from "./Form";
 
 const Game = () => {
   const navigate = useNavigate();
@@ -9,15 +10,15 @@ const Game = () => {
   const [questionData, setQuestionData] = useState(null);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [bestScore, setBestScore] =useState(0);
+  const [bestScore, setBestScore] = useState(0);
 
   //function to get bestScore from localStorage
-useEffect(() => {
-  const bestScore = localStorage.getItem("newBestScore");
-  if (bestScore) {
-    setBestScore(bestScore);
-  }
-},[]);
+  useEffect(() => {
+    const bestScore = localStorage.getItem("newBestScore");
+    if (bestScore) {
+      setBestScore(bestScore);
+    }
+  }, []);
 
   // function to get data from OMDB
   useEffect(() => {
@@ -53,18 +54,18 @@ useEffect(() => {
     if (answerMovieName === questionData.correctAns) {
       setScore(newScore);
       if (questionIndex === questions.length - 1) {
-        setBestScore(newBestScore)
-        localStorage.setItem("newBestScore",newBestScore)
+        setBestScore(newBestScore);
+        //form here if they want it saved in local storage
         navigate("/well-done");
       } else {
         setQuestionIndex(questionIndex + 1);
         setQuestionData(null);
       }
     } else {
-      navigate("/try-again");
       setScore(0);
-      setBestScore(newBestScore)
-      localStorage.setItem("newBestScore",newBestScore)
+      setBestScore(newBestScore);
+      //form here if they want to save to local storage
+      navigate("/try-again");
     }
   }
 

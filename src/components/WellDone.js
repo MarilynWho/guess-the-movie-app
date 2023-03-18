@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import handthree from "../images/Purple-in-Jumper2.png";
 
-const WellDone = (props) => {
+const WellDone = () => {
   const navigate = useNavigate();
 
 
@@ -12,8 +12,9 @@ const WellDone = (props) => {
       <button className="button" onClick={() => navigate("/game")}>
         Another go
       </button>
+      <h2>submit form here</h2>
       <div className="welldone-img">
-        <img scr={handthree} alt="hand"></img>
+        <img src={handthree} alt="hand"></img>
       </div>
     </div>
   );
