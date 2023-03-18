@@ -5,14 +5,17 @@ import handthree from "../images/Purple-in-Jumper2.png";
 const WellDone = () => {
   const navigate = useNavigate();
 
-
   return (
     <div data-test="component-well-done">
       <h2 className="well-donetitle"> Well Done!!!</h2>
-      <button className="button" onClick={() => navigate("/game")}>
+
+      <button className="button mb-3 " onClick={() => navigate("/game")}>
         Another go
       </button>
-      <h2>submit form here</h2>
+      <button className="button" onClick={() => navigate("/score")}>
+        I am tired
+      </button>
+
       <div className="welldone-img">
         <img src={handthree} alt="hand"></img>
       </div>

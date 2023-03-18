@@ -32,8 +32,12 @@ export async function getQuestions() {
 export async function getQuestionData({ name1, name2, correctAns }) {
   const poster1 = await getPoster(name1);
   const poster2 = await getPoster(name2);
-  const soundtrack = await getSoundtrack(correctAns);
-  return { name1, poster1, name2, poster2, correctAns, soundtrack };
+  const allSoundtracks = await getSoundtrack(correctAns);
+  const soundtrack =
+    allSoundtracks.data[Math.floor(Math.random() * allSoundtracks.data.length)]
+      .preview;
+  console.log(soundtrack);
+  return { name1, poster1, name2, poster2, correctAns, soundtrack};
 }
 
 function getPoster(movieName) {
@@ -50,7 +54,7 @@ function getPoster(movieName) {
 function getSoundtrack(movieName) {
   return DeezerAPI.search(movieName)
     .then((res) => {
-      return res.data.data[0].preview;
+      return res.data;
     })
     .catch(() => null);
 }
