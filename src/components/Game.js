@@ -48,11 +48,12 @@ const Game = () => {
   function checkAnswer(index) {
     let answerMovieName;
     const newScore = score + 1;
-    let newBestScore;
-    if (newScore === 0) {
-      newBestScore = 0;
-    } else {
-      Math.max(newScore, bestScore)
+    const newBestScore = Math.max(score, bestScore);
+   
+
+    //function that saves data to local storage
+    function saveScore(s) {
+      localStorage.setItem("newBestScore", s);
     }
 
     console.log(questionIndex, questions.length);
@@ -69,7 +70,8 @@ const Game = () => {
       // if we don't have any more questions
       if (questionIndex === questions.length - 1) {
         setBestScore(newBestScore);
-        //form here if they want it saved in local storage
+        //data gets saved to local storage
+        saveScore(newBestScore);
         navigate("/well-done");
         // if we have more questions
       } else {
@@ -83,16 +85,18 @@ const Game = () => {
       // go to try again page
       navigate("/try-again");
       // reset the score
-      setScore(0);
       setBestScore(newBestScore);
+      //data is stored on local storage
+      saveScore(newBestScore);
+
     }
   }
 
   return (
     <div data-test="component-game">
       <div className="bestScore">
-        <p> score={score} </p>
-        <p> bestScore={bestScore}</p>
+        <p> Score: {score} </p>
+        <p> Best Score: {bestScore}</p>
       </div>
       {/* add posters */}
       <div className="poster">

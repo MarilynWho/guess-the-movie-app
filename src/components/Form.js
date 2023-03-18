@@ -1,28 +1,34 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 const Form = (props) => {
-    const[userInput, setUserInput] = useState()
+    const [userInput, setUserInput] = useState("")
+    const userScore = props.score;
+    let savedData;
 
-    const userScore = props.score
-    
+
     function handleSubmit(event) {
         event.preventDefault();
-        localStorage.setItem(setUserInput(userInput),userScore);
+        localStorage.setItem(userInput, userScore);
+        savedData = window.localStorage.key(2)
+        console.log(savedData);
     }
+
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="name" class="form-control" id="userName" aria-describedby="emailHelp" placeholder="Enter your name here" value={userInput}/>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <div className="form-group">
+                    <input type="text" className="form-control" id="userName" aria-describedby="emailHelp" placeholder="Enter your name here" value={userInput}
+                        onChange={(e) => setUserInput(e.target.value)}
+                    />
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         </div>
     )
 };
 
+export const userInput = "";
+
 export default Form;
 
-// localStorage.setItem("newBestScore", newBestScore);
