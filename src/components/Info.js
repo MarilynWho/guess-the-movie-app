@@ -18,7 +18,7 @@ const Info = (props) => {
 
       <h6>This game is for family and friends</h6>
       <h6>Guess the movie App is made for movie-lovers</h6>
-      <h6>You ready?</h6>
+      <h5>You ready?</h5>
       <button className="button" onClick={() => navigate("/game")}>
             START
           </button>

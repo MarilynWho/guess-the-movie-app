@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Soundtrack from "./Soundtrack";
 import { getQuestions, getQuestionData } from "../utils/lib";
 import { useNavigate } from "react-router-dom";
-import Form from "./Form";
+// import Form from "./Form";
 
 const Game = () => {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ const Game = () => {
   const [questionData, setQuestionData] = useState(null);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [bestScore, setBestScore] =  useState(0);
+  const [bestScore, setBestScore] = useState(0);
 
   //function to get bestScore from localStorage
   useEffect(() => {
@@ -48,7 +48,12 @@ const Game = () => {
   function checkAnswer(index) {
     let answerMovieName;
     const newScore = score + 1;
-    const newBestScore = Math.max(newScore, bestScore);
+    let newBestScore;
+    if (newScore === 0) {
+      newBestScore = 0;
+    } else {
+      Math.max(newScore, bestScore)
+    }
 
     console.log(questionIndex, questions.length);
     // gets name of the movie depending on poster we clicked
@@ -80,7 +85,6 @@ const Game = () => {
       // reset the score
       setScore(0);
       setBestScore(newBestScore);
-      localStorage.setItem("newBestScore", newBestScore);
     }
   }
 
