@@ -1,20 +1,24 @@
 import React from "react";
 import handtwo from "../images/Purple-in-Jumper3.png";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Form from "./Form";
 
 const TryAgain = (props) => {
   const navigate = useNavigate();
   const getScore = localStorage.getItem("newBestScore");
-  
+
   return (
     <div data-test="component-try-again">
       <h1 className="titleagain">Try Again</h1>
-      <button className="button-Again" onClick={() => navigate("/game")}>
-        Play Again
-      </button>
-      <h2>save your score here</h2>
-      <Form score = {getScore} />
+      <h3 className="save text-white">Save your score here</h3>
+      <div className="getscore">
+        <Form score={getScore} />
+      </div>
+      <div className="again">
+        <button className="button-Again mt-3" onClick={() => navigate("/game")}>
+          Play Again
+        </button>
+      </div>
       <div className="handTwo">
         <img src={handtwo} alt="hand" className="hand-two"></img>
       </div>

@@ -56,7 +56,7 @@
 }
 
 .hand-img {
-  padding-bottom: 160px;
+  padding-bottom: 150px;
   padding-right: 175px;
 }
 
@@ -179,7 +179,7 @@
 /*Game*/
 
 .bestScore {
-  color: #e5e7eb;
+  color: white;
   font-size: 20px;
   text-align: right;
 }
@@ -318,6 +318,7 @@
 }
 
 /*Well done*/
+
 .well-donetitle {
   text-align: center;
   color: white;
@@ -328,6 +329,175 @@
 .welldone-img {
   display: flex;
   justify-content: flex-end;
+  height: 200px;
+}
+
+.button-wd {
+  background-color: rgb(233, 236, 10);
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 200px;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-wd:focus {
+  outline: 0;
+}
+
+.button-wd:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.button-wd:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+.btn-tired {
+  background-color: #f1ae2c;
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 200px;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-tired:focus {
+  outline: 0;
+}
+
+.btn-tired:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.btn-tired:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+.saveit {
+  color: white;
+  padding: 10px;
+}
+
+.welld-button {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  padding-top: 30px;
+}
+.tired {
+  padding-left: 30px;
+}
+
+/*form*/
+
+.form-control {
+  width: 300px;
+}
+
+.submit-btn {
+  background-color: #61a3f1;
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 150px;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.submit-btn:focus {
+  outline: 0;
+}
+
+.submit-btn:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.submit-btn:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+.submit {
+  padding-top: 15px;
 }
 
 /*Try again*/
@@ -339,7 +509,7 @@
 }
 
 .hand-two {
-  height: 405px;
+  height: 275px;
 }
 
 .handTwo {
@@ -439,25 +609,40 @@ footer {
     width: 150px;
   }
 
+  /*style home page*/
   /*Title smaller*/
   .title {
     font-size: 40px;
   }
+
   .home {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
   }
 
   /*make hand image smaller in small screens*/
-  .hand {
-    height: 125px;
-  }
-
   .hand-img {
-    padding-bottom: 300px;
+    display: none;
   }
 
+  .btn-one {
+    width: 100px;
+  }
+  .btn-two {
+    width: 100px;
+  }
+
+  /*style game page*/
+
+  .poster {
+    height: 225px;
+  }
+  .audio {
+    width: 275px;
+    display: flex;
+    justify-content: center;
+  }
   /*make buttons smaller in a small screens*/
   .button {
     padding: 10px 10px;
@@ -466,5 +651,35 @@ footer {
   .info {
     padding: 10px 10px;
     width: 100px;
+  }
+
+  /*form*/
+
+  .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  /*try again*/
+
+  .hand-two {
+    display: none;
+  }
+
+  .button-Again {
+    width: 175px;
+  }
+  .again {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*footer*/
+
+  .rights {
+    font-size: 13px;
   }
 }

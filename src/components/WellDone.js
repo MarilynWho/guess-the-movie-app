@@ -11,15 +11,20 @@ const WellDone = () => {
     <div data-test="component-well-done">
       <h2 className="well-donetitle"> Well Done!!!</h2>
 
-      <button className="button mb-3 " onClick={() => navigate("/game")}>
-        Another go
-      </button>
-      <h2>Or wanna save it?</h2>
-      <Form score = {getScore} />
-      <button className="button" onClick={() => navigate("/score")}>
-        I am tired
-      </button>
-
+      <h3 className="saveit">Do you wanna save your results?</h3>
+      <Form score={getScore} />
+      <div className=" container welld-button">
+        <div className="another">
+          <button className="button-wd  " onClick={() => navigate("/game")}>
+            Another go
+          </button>
+        </div>
+        <div className="tired">
+          <button className="btn-tired" onClick={() => navigate("/score")}>
+            I am tired
+          </button>
+        </div>
+      </div>
       <div className="welldone-img">
         <img src={handthree} alt="hand"></img>
       </div>

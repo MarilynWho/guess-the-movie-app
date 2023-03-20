@@ -49,7 +49,6 @@ const Game = () => {
     let answerMovieName;
     const newScore = score + 1;
     const newBestScore = Math.max(score, bestScore);
-   
 
     //function that saves data to local storage
     function saveScore(s) {
@@ -88,15 +87,16 @@ const Game = () => {
       setBestScore(newBestScore);
       //data is stored on local storage
       saveScore(newBestScore);
-
     }
   }
 
   return (
     <div data-test="component-game">
       <div className="bestScore">
-        <p> Score: {score} </p>
-        <p> Best Score: {bestScore}</p>
+        <p>
+          {" "}
+          Score: {score} Best Score: {bestScore}
+        </p>
       </div>
       {/* add posters */}
       <div className="poster">

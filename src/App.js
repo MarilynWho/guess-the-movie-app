@@ -17,7 +17,7 @@ function App() {
     <>
       <BrowserRouter>
         <div className="wrapper">
-          <ParticlesBg type="circle" bg={true} />
+          <ParticlesBg type="circle" bg={true} style={{ width: "100vh" }} />
           <Navbar />
           <div className="container">
             <Routes>
