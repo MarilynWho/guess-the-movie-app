@@ -33,6 +33,7 @@ export async function getQuestionData({ name1, name2, correctAns }) {
   const poster1 = await getPoster(name1);
   const poster2 = await getPoster(name2);
   const allSoundtracks = await getSoundtrack(correctAns);
+  if (!allSoundtracks.data) { return undefined; }
   const soundtrack =
     allSoundtracks.data[Math.floor(Math.random() * allSoundtracks.data.length)]
       .preview;

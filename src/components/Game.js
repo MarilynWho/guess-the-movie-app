@@ -1,8 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, CSSProperties } from "react";
 import Soundtrack from "./Soundtrack";
 import { getQuestions, getQuestionData } from "../utils/lib";
 import { useNavigate } from "react-router-dom";
 // import Form from "./Form";
+import PacmanLoader from "react-spinners/PacmanLoader";
+const override: CSSProperties = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "red",
+};
 
 const Game = () => {
   const navigate = useNavigate();
@@ -11,6 +17,8 @@ const Game = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
+  let [loading, setLoading] = useState(true);
+  let [color, setColor] = useState("#ffffff");
 
   //function to get bestScore from localStorage
   useEffect(() => {
@@ -34,14 +42,25 @@ const Game = () => {
       return;
     }
     getQuestionData(questions[questionIndex]).then((questionData) => {
-      setQuestionData(questionData);
+      if (questionData){
+        setQuestionData(questionData);
+      }
     });
     // this function will trigger when we change questions or questionIndex
   }, [questions, questionIndex]);
 
   // if question data is not loaded yet, show Loading
   if (!questionData) {
-    return "loading...";
+    return (
+      <PacmanLoader
+        color={color}
+        loading={loading}
+        cssOverride={override}
+        size={25}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+    );
   }
 
   // checks if answer is correct
