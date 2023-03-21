@@ -194,6 +194,10 @@
   padding-left: 10px;
 }
 
+.img-game:hover, .img-game-two:hover{
+  transform: scale(1.05);
+}
+
 .poster {
   display: flex;
   justify-content: center;
