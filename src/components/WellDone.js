@@ -9,7 +9,7 @@ const WellDone = (props) => {
 
   return (
     <div data-test="component-well-done">
-      <h2 className="well-donetitle"> Well Done!!!</h2>
+      <h2 className="well-donetitle"> You are the Movie Master!</h2>
 
       <h3 className="saveit">Do you wanna save and see your results?</h3>
       <Form score={getScore} />
