@@ -6,15 +6,6 @@ const Scores = (props) => {
   const bestScore = localStorage.getItem("userScore")
   const savedName = localStorage.getItem("userName");
 
-  //sample scores to dipay in Scores.js
-  const scoreData = []
-  const obj = {
-    name: savedName,
-    score: bestScore,
-    title: whatTitle()
-  }
-  scoreData.push(obj);
-
   function whatTitle() {
     let title;
     if (bestScore === null) {
@@ -41,16 +32,12 @@ const Scores = (props) => {
           </tr>
         </thead>
         <tbody>
-          {scoreData.map((val, key) => {
-            return (
-              <tr key={key}>
+              <tr>
                 <th scope="row"></th>
-                <td>{val.name}</td>
-                <td>{val.title}</td>
-                <td>{val.score}</td>
+                <td>{savedName}</td>
+                <td>{whatTitle()}</td>
+                <td>{bestScore}</td>
               </tr>
-            )
-          })}
         </tbody>
       </table>
       <button className="button" onClick={() => navigate("/")}>Back Home</button>

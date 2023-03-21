@@ -2,7 +2,8 @@ import React, { useState, useEffect, CSSProperties } from "react";
 import Soundtrack from "./Soundtrack";
 import { getQuestions, getQuestionData } from "../utils/lib";
 import { useNavigate } from "react-router-dom";
-// import Form from "./Form";
+import WellDone from "./WellDone";
+
 import PacmanLoader from "react-spinners/PacmanLoader";
 const override: CSSProperties = {
   display: "block",

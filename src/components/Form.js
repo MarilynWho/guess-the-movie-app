@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Form = (props) => {
   const [userInput, setUserInput] = useState("");
@@ -9,8 +9,9 @@ const Form = (props) => {
     event.preventDefault();
     localStorage.setItem("userScore", userScore);
     localStorage.setItem("userName", userInput);
+    navigate("/scores")
   }
-//   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -30,7 +31,6 @@ const Form = (props) => {
           <button
             type="submit"
             className="submit-btn"
-            // onClick={() => navigate("/scores")}
           >
             Submit
           </button>

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import handthree from "../images/Purple-in-Jumper2.png";
 import Form from "./Form";
 
-const WellDone = () => {
+const WellDone = (props) => {
   const navigate = useNavigate();
   const getScore = localStorage.getItem("newBestScore");
 
