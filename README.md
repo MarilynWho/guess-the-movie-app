@@ -12,8 +12,8 @@ This game is perfect for movie-lovers who want to test their knowledge and have 
 
 - [Description](#description)
 - [Usage](#usage)
-- [Mock-Up](#Mock-up)
-- [Additional Info](#github)
+- [Mock-Up](#mock-up)
+- [Additional Info](#questions)
 
 ## Usage 
 
@@ -33,5 +33,12 @@ The usage of this app is:
 
   - Repeat the game with a different playlist of songs for a new challenge.
 
+## Mock-Up
+
+You can play "Guess the Movie" game clicking the link:
+
+https://guess-the-movies-app.netlify.app/
+
+## Questions
 
 
