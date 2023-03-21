@@ -3,35 +3,17 @@ import { useNavigate } from "react-router-dom";
 
 const Scores = (props) => {
   const navigate = useNavigate();
-  const bestScore = localStorage.getItem("newBestScore")
+  const bestScore = localStorage.getItem("userScore")
+  const savedName = localStorage.getItem("userName");
 
   //sample scores to dipay in Scores.js
-  const scoreData = [
-    {
-      name: "Nana",
-      score: bestScore,
-      title: whatTitle()
-    },
-    {
-      name: "Jack",
-      score: bestScore,
-      title: whatTitle()
-    },
-  ]
-
-  // function allStorage() {
-  //   var archive = [],
-  //     keys = Object.keys(localStorage),
-  //     i = 2, key;
-
-  //   for (; key = keys[i]; i++) {
-  //     archive.push(key);
-  //   }
-
-  //   return archive;
-  // }
-  // const name = allStorage();
-  // console.log(name);
+  const scoreData = []
+  const obj = {
+    name: savedName,
+    score: bestScore,
+    title: whatTitle()
+  }
+  scoreData.push(obj);
 
   function whatTitle() {
     let title;
