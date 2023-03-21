@@ -196,6 +196,7 @@
 
 .img-game:hover, .img-game-two:hover{
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .poster {
