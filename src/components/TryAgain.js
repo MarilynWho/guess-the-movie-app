@@ -7,6 +7,11 @@ const TryAgain = (props) => {
   const navigate = useNavigate();
   const getScore = localStorage.getItem("newBestScore");
 
+  const playAgain = () =>{
+    localStorage.removeItem("currentScore");
+    navigate("/game")
+  }
+
   return (
     <div data-test="component-try-again">
       <h1 className="titleagain">Try Again</h1>
@@ -15,7 +20,7 @@ const TryAgain = (props) => {
         <Form score={getScore} />
       </div>
       <div className="again">
-        <button className="button-Again mt-3" onClick={() => navigate("/game")}>
+        <button className="button-Again mt-3" onClick={() => playAgain()}>
           Play Again
         </button>
       </div>

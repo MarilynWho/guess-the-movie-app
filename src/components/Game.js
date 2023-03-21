@@ -2,7 +2,6 @@ import React, { useState, useEffect, CSSProperties } from "react";
 import Soundtrack from "./Soundtrack";
 import { getQuestions, getQuestionData } from "../utils/lib";
 import { useNavigate } from "react-router-dom";
-import WellDone from "./WellDone";
 
 import PacmanLoader from "react-spinners/PacmanLoader";
 
@@ -27,6 +26,16 @@ const Game = () => {
     const bestScore = localStorage.getItem("newBestScore");
     if (bestScore) {
       setBestScore(bestScore);
+    }
+  }, []);
+
+  //function to get current score from localStorage
+  useEffect(() => {
+    const score = Number(localStorage.getItem("currentScore"));
+    if (!score) {
+      return;
+    } else {
+      setScore(score);
     }
   }, []);
 
@@ -75,6 +84,10 @@ const Game = () => {
     function saveScore(s) {
       localStorage.setItem("newBestScore", s);
     }
+    //function that saves data to local storage
+    function saveScoreNow(s) {
+      localStorage.setItem("currentScore", s);
+    }
 
     console.log(questionIndex, questions.length);
     // gets name of the movie depending on poster we clicked
@@ -92,6 +105,7 @@ const Game = () => {
         setBestScore(newBestScore);
         //data gets saved to local storage
         saveScore(newBestScore);
+        saveScoreNow(newBestScore);
         navigate("/well-done");
         // if we have more questions
       } else {
@@ -105,9 +119,14 @@ const Game = () => {
       // go to try again page
       navigate("/try-again");
       // reset the score
+      setScore(0)
+      //set bestcore as the higest score
       setBestScore(newBestScore);
       //data is stored on local storage
       saveScore(newBestScore);
+      //saves running score to local storage
+      saveScoreNow(score);
+      //
     }
   }
 

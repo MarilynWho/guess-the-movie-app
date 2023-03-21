@@ -11,16 +11,16 @@ const WellDone = (props) => {
     <div data-test="component-well-done">
       <h2 className="well-donetitle"> Well Done!!!</h2>
 
-      <h3 className="saveit">Do you wanna save your results?</h3>
+      <h3 className="saveit">Do you wanna save and see your results?</h3>
       <Form score={getScore} />
       <div className=" container welld-button">
         <div className="another">
           <button className="button-wd  " onClick={() => navigate("/game")}>
-            Another go
+            or do you want to continue?
           </button>
         </div>
         <div className="tired">
-          <button className="btn-tired" onClick={() => navigate("/score")}>
+          <button className="btn-tired" onClick={() => navigate("/scores")}>
             I am tired
           </button>
         </div>
