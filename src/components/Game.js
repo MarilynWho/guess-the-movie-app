@@ -5,9 +5,10 @@ import { useNavigate } from "react-router-dom";
 import WellDone from "./WellDone";
 
 import PacmanLoader from "react-spinners/PacmanLoader";
+
 const override: CSSProperties = {
   display: "block",
-  margin: "0 auto",
+  margin: "auto",
   borderColor: "red",
 };
 
@@ -18,8 +19,8 @@ const Game = () => {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
-  let [loading, setLoading] = useState(true);
-  let [color, setColor] = useState("#ffffff");
+  const loading = true;
+  let color = "#000000";
 
   //function to get bestScore from localStorage
   useEffect(() => {
