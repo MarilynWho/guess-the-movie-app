@@ -13,7 +13,7 @@ Screenshot:
 
   > ![Screenshot](./src/images/home-page.png)
   > ![Screenshot](./src/images/home-page.png)
-  > <img src="./src/images/mobile.png" alt= "Mobile version" height="35vh">
+  > <img src="./src/images/mobile.png" alt= "Mobile version" height="50%">
 
 ## Table of Contents
 
