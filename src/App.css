@@ -184,6 +184,8 @@
   color: white;
   font-size: 20px;
   text-align: right;
+  mix-blend-mode: difference;
+  filter: drop-shadow(0.05em 0.05em orange);
 }
 
 .img-game {
@@ -332,6 +334,8 @@
   color: white;
   padding-top: 20px;
   font-size: 50px;
+  mix-blend-mode: difference;
+  filter: drop-shadow(0.05em 0.05em orange);
 }
 
 .welldone-img {
@@ -438,6 +442,8 @@
 .saveit {
   color: white;
   padding: 10px;
+  mix-blend-mode: difference;
+  filter: drop-shadow(0.05em 0.05em orange);
 }
 
 .welld-button {
@@ -514,6 +520,8 @@
   text-align: center;
   color: white;
   padding-top: 30px;
+  mix-blend-mode: difference;
+  filter: drop-shadow(0.05em 0.05em orange);
 }
 
 .hand-two {
