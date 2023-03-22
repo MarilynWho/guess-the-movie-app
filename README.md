@@ -8,12 +8,21 @@ To play, you will need to answer 5 questions. For each correct answer, you will 
 
 This game is perfect for movie-lovers who want to test their knowledge and have some fun with friends and family. So get ready to play "Guess the Movie" and see how many movies you can guess correctly!
 
+
+Screenshot:
+
+  > ![Screenshot](./src/images/home-page.png)
+  > ![Screenshot](./src/images/home-page.png)
+  > ![Screenshot](./src/images/mobile.png)
+
 ## Table of Contents
 
 - [Description](#description)
 - [Usage](#usage)
 - [Mock-Up](#mock-up)
+- [Contributing](#Contributing)
 - [Additional Info](#questions)
+
 
 ## Usage 
 
@@ -38,6 +47,11 @@ The usage of this app is:
 You can play "Guess the Movie" game clicking the link:
 
 https://guess-the-movies-app.netlify.app/
+
+
+## Contributing
+
+Do fork and pull to contibute to project.
 
 ## Questions
 
