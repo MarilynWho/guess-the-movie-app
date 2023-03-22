@@ -4,6 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
+
+  function startGame() {
+    localStorage.removeItem("currentScore");
+    navigate("/game")
+  }
+
   return (
     <div data-test="component-home" className="homePage">
       <div className="Container">
@@ -11,7 +17,7 @@ const Home = () => {
       </div>
       <div className="container home">
         <div className="btn-one">
-          <button className="button" onClick={() => navigate("/game")}>
+          <button className="button" onClick={() => startGame()}>
             START
           </button>
           <div className="btn-two">

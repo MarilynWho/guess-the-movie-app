@@ -5,7 +5,7 @@ import Form from "./Form";
 
 const TryAgain = (props) => {
   const navigate = useNavigate();
-  const getScore = localStorage.getItem("newBestScore");
+  const getScore = localStorage.getItem("currentScore");
 
   const playAgain = () =>{
     localStorage.removeItem("currentScore");

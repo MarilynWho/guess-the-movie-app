@@ -81,7 +81,7 @@ const Game = () => {
     const newBestScore = Math.max(score, bestScore);
 
     //function that saves data to local storage
-    function saveScore(s) {
+    function saveBestScore(s) {
       localStorage.setItem("newBestScore", s);
     }
     //function that saves data to local storage after user plays
@@ -106,8 +106,9 @@ const Game = () => {
         setScore(newScore);
         setBestScore(newBestScore);
         //data gets saved to local storage
-        saveScore(newBestScore);
-        saveScoreNow(newBestScore);
+        saveBestScore(newBestScore);
+        //daves the current score
+        saveScoreNow(score);
         navigate("/well-done");
         // if we have more questions
       } else {
@@ -120,9 +121,9 @@ const Game = () => {
     } else {
       //set bestcore as the higest score
       setBestScore(newBestScore);
-      //data is stored on local storage
-      saveScore(newBestScore);
-      //saves running score to local storage
+      //bestscore is stored on local storage
+      saveBestScore(newBestScore);
+      //saves current score to local storage
       saveScoreNow(score);
       // reset the score
       setScore(0)

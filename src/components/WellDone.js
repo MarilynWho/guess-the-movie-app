@@ -5,7 +5,7 @@ import Form from "./Form";
 
 const WellDone = (props) => {
   const navigate = useNavigate();
-  const getScore = localStorage.getItem("newBestScore");
+  const getScore = localStorage.getItem("currentScore");
 
   return (
     <div data-test="component-well-done">
