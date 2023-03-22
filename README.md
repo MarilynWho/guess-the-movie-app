@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/873e97f5-7b19-41fa-be22-44d4e295f116/deploy-status)](https://app.netlify.com/sites/guess-the-movies-app/deploys)
+
 # Guess the Movie
 
 ## Description
