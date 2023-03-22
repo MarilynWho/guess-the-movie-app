@@ -45,9 +45,11 @@ https://guess-the-movies-app.netlify.app/
 
 If you have any question you can email us:
 
-viktoriia.cheche@gmail.com
-catalunasiegfried@gmail.com
-tatiana_felisberto_@hotmail.com
+Victoria: viktoriia.cheche@gmail.com
+ 
+Daryl: catalunasiegfried@gmail.com
+
+Tatiana: tatiana_felisberto_@hotmail.com
 
 
 
