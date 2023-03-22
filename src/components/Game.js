@@ -102,6 +102,7 @@ const Game = () => {
       setScore(newScore);
       // if we don't have any more questions
       if (questionIndex === questions.length - 1) {
+        setScore(newScore);
         setBestScore(newBestScore);
         //data gets saved to local storage
         saveScore(newBestScore);
