@@ -3,16 +3,17 @@ import { useNavigate } from "react-router-dom";
 
 const Scores = (props) => {
   const navigate = useNavigate();
-  const bestScore = localStorage.getItem("userScore")
+  const bestScore = Number(localStorage.getItem("newBestScore"));
   const savedName = localStorage.getItem("userName");
+  const userScore = localStorage.getItem("userScore");
 
   function whatTitle() {
     let title;
     if (bestScore === null) {
       return;
-    } else if (bestScore === 1 || 2) {
+    } else if (bestScore >= 0 && bestScore < 5) {
       title = "Movie Geek";
-    } else if (bestScore === 3 || 4) {
+    } else if (bestScore >= 6 && bestScore < 10) {
       title = "Film Nerd";
     } else {
       title = "Cinephile";
@@ -28,7 +29,8 @@ const Scores = (props) => {
             <th scope="col"></th>
             <th scope="col">Your Name</th>
             <th scope="col">Your Title</th>
-            <th scope="col">Your Score</th>
+            <th scope="col">Your Current Score</th>
+            <th scope="col">Your Best Score</th>
           </tr>
         </thead>
         <tbody>
@@ -36,6 +38,7 @@ const Scores = (props) => {
                 <th scope="row"></th>
                 <td>{savedName}</td>
                 <td>{whatTitle()}</td>
+                <td>{userScore}</td>
                 <td>{bestScore}</td>
               </tr>
         </tbody>
