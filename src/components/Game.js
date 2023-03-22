@@ -84,7 +84,8 @@ const Game = () => {
     function saveScore(s) {
       localStorage.setItem("newBestScore", s);
     }
-    //function that saves data to local storage
+    //function that saves data to local storage after user plays
+    // another game after well done.
     function saveScoreNow(s) {
       localStorage.setItem("currentScore", s);
     }
@@ -117,17 +118,16 @@ const Game = () => {
       }
       // if the answer is wrong
     } else {
-      // go to try again page
-      navigate("/try-again");
-      // reset the score
-      setScore(0)
       //set bestcore as the higest score
       setBestScore(newBestScore);
       //data is stored on local storage
       saveScore(newBestScore);
       //saves running score to local storage
       saveScoreNow(score);
-      //
+      // reset the score
+      setScore(0)
+      // go to try again page
+      navigate("/try-again");
     }
   }
 

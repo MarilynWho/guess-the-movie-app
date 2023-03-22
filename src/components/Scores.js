@@ -5,7 +5,7 @@ const Scores = (props) => {
   const navigate = useNavigate();
   const bestScore = Number(localStorage.getItem("newBestScore"));
   const savedName = localStorage.getItem("userName");
-  const userScore = localStorage.getItem("userScore");
+  const userScore = localStorage.getItem("currentScore");
 
   function whatTitle() {
     let title;

@@ -9,7 +9,6 @@ const Form = (props) => {
     event.preventDefault();
     localStorage.setItem("userScore", userScore);
     localStorage.setItem("userName", userInput);
-    localStorage.removeItem("currentScore");
     navigate("/scores")
   }
   const navigate = useNavigate();
