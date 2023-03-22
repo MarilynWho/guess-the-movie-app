@@ -49,6 +49,8 @@
   font-size: 50px;
   padding-top: 40px;
   padding-bottom: 50px;
+  mix-blend-mode: difference;
+  filter: drop-shadow(0.05em 0.05em orange);
 }
 
 .hand {
