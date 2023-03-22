@@ -10,9 +10,9 @@ const Scores = (props) => {
     let title;
     if (bestScore === null) {
       return;
-    } else if (bestScore === 1 || 2) {
+    } else if (bestScore < 5) {
       title = "Movie Geek";
-    } else if (bestScore === 3 || 4) {
+    } else if (10 > bestScore >5 ) {
       title = "Film Nerd";
     } else {
       title = "Cinephile";
@@ -28,7 +28,8 @@ const Scores = (props) => {
             <th scope="col"></th>
             <th scope="col">Your Name</th>
             <th scope="col">Your Title</th>
-            <th scope="col">Your Score</th>
+            <th scope="col">Your Current Score</th>
+            <th scope="col">Your Best Score</th>
           </tr>
         </thead>
         <tbody>
@@ -36,6 +37,7 @@ const Scores = (props) => {
                 <th scope="row"></th>
                 <td>{savedName}</td>
                 <td>{whatTitle()}</td>
+                <td>{bestScore}</td>
                 <td>{bestScore}</td>
               </tr>
         </tbody>
