@@ -194,7 +194,8 @@
   padding-left: 10px;
 }
 
-.img-game:hover, .img-game-two:hover{
+.img-game:hover,
+.img-game-two:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
@@ -264,8 +265,8 @@
 .info-title {
   color: white;
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
 
 /*Scoore file*/
