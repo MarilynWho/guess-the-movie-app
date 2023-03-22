@@ -13,7 +13,9 @@ This game is perfect for movie-lovers who want to test their knowledge and have 
 - [Description](#description)
 - [Usage](#usage)
 - [Mock-Up](#mock-up)
+- [Contributing](#Contributing)
 - [Additional Info](#questions)
+
 
 ## Usage 
 
@@ -39,7 +41,13 @@ You can play "Guess the Movie" game clicking the link:
 
 https://guess-the-movies-app.netlify.app/
 
- ![alt text](https://github.com/MarilynWho/guess-the-movie-app/blob/main/src/images/React%20App.gif?raw=true)
+![alt text](https://github.com/MarilynWho/guess-the-movie-app/blob/main/src/images/React%20App.gif?raw=true)
+ 
+
+## Contributing
+
+Do fork and pull to contibute to project.
+
 
 ## Questions
 
