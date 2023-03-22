@@ -5,7 +5,9 @@ import logo from "../images/logo.png";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg ">
-      <img src={logo} alt="Guess the Movie" className="logo"></img>
+      <Link to="/">
+        <img src={logo} alt="Guess the Movie" className="logo" />
+      </Link>
       <button
         className="navbar-toggler"
         type="button"

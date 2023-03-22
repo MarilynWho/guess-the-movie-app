@@ -7,7 +7,7 @@ import PacmanLoader from "react-spinners/PacmanLoader";
 
 const override: CSSProperties = {
   display: "block",
-  margin: "auto",
+  margin: "35vh auto auto auto",
   borderColor: "red",
 };
 
