@@ -39,6 +39,8 @@ You can play "Guess the Movie" game clicking the link:
 
 https://guess-the-movies-app.netlify.app/
 
+ ![alt text](https://github.com/MarilynWho/guess-the-movie-app/blob/main/src/images/React%20App.gif?raw=true)
+
 ## Questions
 
 
