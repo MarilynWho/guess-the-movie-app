@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Info = (props) => {
   const navigate = useNavigate();
   return (
-    <div data-test="component-info">
+    <div data-test="component-info" class="info-page">
       <h2 className="info-title">Info</h2>
       <p>The concept is simple, can you guess that movie based on a song</p>
       <p>
