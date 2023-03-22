@@ -271,6 +271,13 @@
   text-align: center;
   padding-top: 20px;
   padding-bottom: 15px;
+  mix-blend-mode: difference;
+  filter: drop-shadow(0.05em 0.05em orange);
+}
+
+.info-page {
+  mix-blend-mode: difference;
+  filter: drop-shadow(0.05em 0.05em orange);
 }
 
 /*Scoore file*/
