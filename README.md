@@ -25,6 +25,9 @@ This game is perfect for movie-lovers who want to test their knowledge and have 
 
 ## Technologies
 
+- HTML
+- JavaScript
+- CSS
 - React
 - Bootstrap
 - OMDB (API) 
