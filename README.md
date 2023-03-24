@@ -17,10 +17,21 @@ This game is perfect for movie-lovers who want to test their knowledge and have 
 
 - [Description](#description)
 - [Usage](#usage)
+- [Technologies](#technologies)
 - [Mock-Up](#mock-up)
 - [Presentation](#presentation)
 - [Contributing](#contributing)
 - [Questions](#questions)
+
+## Technologies
+
+- React
+- Bootstrap
+- OMDB (API) 
+- Deezer (API) 
+- npm react-spinners (pacman)
+- npm install --save particles-bg (Background)
+- npm install react-hr-audio-player (Audio-player)
 
 
 ## Usage 
